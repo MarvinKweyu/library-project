@@ -1,7 +1,6 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { CreateUserDto } from './dto/create-user.dto';
-import { DatabaseService } from 'src/database/database.service';
 
 export interface User {
   id: number;
@@ -45,7 +44,6 @@ export class UsersService {
     },
   ];
 
-  constructor(private prismaService: DatabaseService) {}
   getCurrentUser() {
     return 'Marvin';
   }
